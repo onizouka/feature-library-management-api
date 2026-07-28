@@ -19,5 +19,5 @@ describe("Book API Integration Tests", () => {
 
   // Test pour mettre à jour un livre (le code doit être 200 et la propriété "updated" doit être vraie)
 
-  // Test pour supprimer un livre (le code doit être 200 et la propriété "delete" doit être vraie)
+  // Test pour supprimer un livre (le code doit être 200 et la propriété "deleted" doit être vraie)
 });
