@@ -1,13 +1,6 @@
-import express from "express";
+import app from "./app.js";
 
-import bookController from "./book.controller.js";
 import bookService from "./book.service.js";
-
-// Créer une application Express
-const app = express();
-
-// Middleware pour analyser les requêtes JSON
-app.use(express.json());
 
 // Donnée d'exemple
 const sampleBook = {
@@ -23,16 +16,10 @@ bookService.createBook(sampleBook, (err) => {
   }
 });
 
-// Définir les routes pour l'API des livres
-app.use("/books", bookController);
-
 // Définir le port sur lequel le serveur écoute
-const PORT = 3000;
+const PORT = process.env.PORT ?? 3000;
 
 // Démarrer le serveur
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
-
-// Exporter l'application pour les tests d'intégration
-export default app;
