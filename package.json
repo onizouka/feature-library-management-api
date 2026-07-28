@@ -4,7 +4,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node --experimental-sqlite .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "type": "module",
   "keywords": [],
@@ -13,5 +13,12 @@
   "description": "",
   "dependencies": {
     "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^8.0.1",
+    "@babel/preset-env": "^8.0.2",
+    "babel-jest": "^30.4.1",
+    "jest": "^30.4.2",
+    "supertest": "^7.2.2"
   }
 }
