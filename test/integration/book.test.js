@@ -57,6 +57,8 @@ it("mise à jour d'un livre", async()=>{
             author: "Romain Benassaya",
             copies: 10,
         })
+    expect(response.status).toBe(200);
+    expect(response.body.updated).toBe(true);
 
 });
   // Test pour supprimer un livre (le code doit être 200 et la propriété "deleted" doit être vraie)
@@ -76,5 +78,7 @@ it("mise à jour d'un livre", async()=>{
                 author: "J.G Ballard",
                 copies: 5,
             })
+        expect(response.status).toBe(200);
+        expect(response.body.deleted).toBe(true);
     })
 });
